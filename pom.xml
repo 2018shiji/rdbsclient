@@ -12,7 +12,7 @@
     <artifactId>data_accesser</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>data_accesser</name>
-    <description>data accesser module</description>
+    <description>data access module</description>
 
     <properties>
         <java.version>11</java.version>
@@ -25,10 +25,17 @@
         </dependency>
 
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
