@@ -1,0 +1,39 @@
+CREATE TABLE IF NOT EXISTS "articles"(
+"article_id" int NOT NULL,
+"title" varchar(200) NOT NULL,
+"category" varchar(100) NOT NULL,
+PRIMARY KEY("article_id")
+)
+
+INSERT INTO articles ("article_id", "title", "category", "chapter") VALUES
+(1, 'Java Concurrency', 'Java', 'chapter1'),
+(2, 'Spring Boot Getting Started', 'Spring Boot', 'chapter1'),
+(3, 'Lambda Expressions Java 8 Example', 'Java 8', 'chapter1');
+
+select * from articles
+delete from articles where article_id = 3
+alter table articles add "chapter" varchar(100) not null
+
+select * from pg_tables where schemaname = 'public'
+select * from information_schema.columns where table_schema = 'public' and table_name = 'articles'
+
+
+create table "v_port_plate"(
+"plate_id" numeric(20) not null,
+"plate_no" varchar(16),
+"trvaIcrane_id" numeric(10),
+"lane_no" numeric(4),
+"ctime" timestamp(6),
+"mtime" timestamp(6),
+PRIMARY KEY("plate_id")
+)
+comment on table v_port_plate is '拖车信息视图';
+comment on column v_port_plate.plate_id is '数据ID';
+comment on column v_port_plate.plate_no is '车号';
+comment on column v_port_plate.trvaIcrane_id is '桥吊id';
+comment on column v_port_plate.lane_no is '车道号';
+comment on column v_port_plate.ctime is '创建时间';
+comment on column v_port_plate.mtime is '更新时间'
+
+
+wireshark,linux抓取postgreSql数据操作过程中CRUD的数据包（单次插入，批量更新...）

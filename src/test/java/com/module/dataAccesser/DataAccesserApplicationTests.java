@@ -7,12 +7,31 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class DataAccesserApplicationTests {
 
-    @Autowired
-    com.module.dataAccesser.config.abcdefg abcdefg;
+    RestClientUtil util = new RestClientUtil();
 
     @Test
-    void contextLoads() {
+    void getArticleByIdDemo() {
+        util.getArticleByIdDemo();
+    }
 
+    @Test
+    void addArticleDemo(){
+        util.addArticleDemo();
+    }
+
+    @Test
+    void updateArticleDemo(){
+        util.updateArticleDemo();
+    }
+
+    @Test
+    void deleteArticleDemo(){
+        util.deleteArticleDemo();
+    }
+
+    @Test
+    void getAllArticleDemo(){
+        util.getAllArticlesDemo();
     }
 
 }
