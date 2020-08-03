@@ -19,21 +19,25 @@ select * from information_schema.columns where table_schema = 'public' and table
 
 
 create table "v_port_plate"(
-"plate_id" numeric(20) not null,
-"plate_no" varchar(16),
-"trvaIcrane_id" numeric(10),
-"lane_no" numeric(4),
-"ctime" timestamp(6),
-"mtime" timestamp(6),
-PRIMARY KEY("plate_id")
-)
+                               "plate_id" numeric(20) not null,
+                               "plate_no" varchar(16),
+                               "Ice_id" numeric(10),
+                               "lane_no" numeric(4),
+                               "ctime" timestamp(6),
+                               "mtime" timestamp(6),
+                               PRIMARY KEY("plate_id")
+);
 comment on table v_port_plate is '拖车信息视图';
 comment on column v_port_plate.plate_id is '数据ID';
 comment on column v_port_plate.plate_no is '车号';
-comment on column v_port_plate.trvaIcrane_id is '桥吊id';
+comment on column v_port_plate."Ice_id" is '桥吊id';
 comment on column v_port_plate.lane_no is '车道号';
 comment on column v_port_plate.ctime is '创建时间';
 comment on column v_port_plate.mtime is '更新时间'
+
+INSERT INTO v_port_plate ("plate_id", "plate_no", "Ice_id", "lane_no", "ctime", "mtime") VALUES
+(110, 'baojindianhua', 110, 110, '2020-08-03 17:00:59', '2020-08-03 17:01:59'),
+(120, 'jiiuhuchedianhua', 120, 120, '2020-08-03 17:00:59', '2020-08-03 17:01:59');
 
 
 wireshark,linux抓取postgreSql数据操作过程中CRUD的数据包（单次插入，批量更新...）

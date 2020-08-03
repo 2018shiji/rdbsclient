@@ -1,6 +1,6 @@
 package com.module.dataAccesser.postgreSQL;
 
-import com.module.dataAccesser.postgreSQL.repository.ArticleRepository;
+import com.module.dataAccesser.pojo.Article;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

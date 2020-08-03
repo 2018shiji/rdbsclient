@@ -1,6 +1,6 @@
 package com.module.dataAccesser;
 
-import com.module.dataAccesser.postgreSQL.Article;
+import com.module.dataAccesser.pojo.Article;
 import org.springframework.http.*;
 import org.springframework.web.client.RestTemplate;
 

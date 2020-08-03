@@ -1,5 +1,7 @@
-package com.module.dataAccesser.postgreSQL;
+package com.module.dataAccesser;
 
+import com.module.dataAccesser.pojo.Article;
+import com.module.dataAccesser.postgreSQL.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
