@@ -38,6 +38,26 @@ comment on column v_port_plate.mtime is '更新时间'
 INSERT INTO v_port_plate ("plate_id", "plate_no", "Ice_id", "lane_no", "ctime", "mtime") VALUES
 (110, 'baojindianhua', 110, 110, '2020-08-03 17:00:59', '2020-08-03 17:01:59'),
 (120, 'jiiuhuchedianhua', 120, 120, '2020-08-03 17:00:59', '2020-08-03 17:01:59');
+更换列名:alter table v_port_plate rename ice_id to trvalcrane_id
 
+create table "v_port_plate_photo"(
+                                    "photo_id" numeric(20) not null,
+                                    "plate_id" numeric(20) not null,
+                                    "photo_url" varchar(512),
+                                    "ctime" timestamp(6),
+                                    PRIMARY KEY("photo_id")
+);
+comment on column v_port_plate_photo is '拖车图片视图'；
+comment on column v_port_plate_photo.photo_id is '图片唯一Id'；
+comment on column v_port_plate_photo.plate_id is '图片所属拖车ID'；
+comment on column v_port_plate_photo.photo_url is '图片url(http://ip:port/url)'；
+comment on column v_port_plate_photo.ctime is '创建时间'；
+
+INSERT INTO v_port_plate_photo ("photo_id", "plate_id", "photo_url", "ctime") VALUES
+(111, 110, 'http://www..', '2020-08-05 17:00:59'),
+(121, 120, 'http://www..', '2020-08-05 18:00:59');
+update v_port_plate_photo set plate_id = 120 where photo_id = 121
+添加外键约束：
+alter table v_port_plate_photo add foreign key (plate_id) references v_port_plate(plate_id) on update cascade on delete cascade;
 
 wireshark,linux抓取postgreSql数据操作过程中CRUD的数据包（单次插入，批量更新...）

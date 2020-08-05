@@ -8,6 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 class DataAccesserApplicationTests {
 
     RestClientUtil util = new RestClientUtil();
+    PlateRestClientUtil plateUtil = new PlateRestClientUtil();
 
     @Test
     void getArticleByIdDemo() {
@@ -32,6 +33,11 @@ class DataAccesserApplicationTests {
     @Test
     void getAllArticleDemo(){
         util.getAllArticlesDemo();
+    }
+
+    @Test
+    void getPlateById(){
+        plateUtil.getArticleByIdDemo();
     }
 
 }
