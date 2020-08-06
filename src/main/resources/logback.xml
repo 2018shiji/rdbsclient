@@ -8,6 +8,11 @@
             <pattern>1-%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger - %msg%n</pattern>
             <charset>GBK</charset>
         </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>info</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
     </appender>
 
 
@@ -82,15 +87,15 @@
 
     <!--设置为OFF,即屏蔽; 留下sqltiming作为INFO级别输出-->
     <logger name="jdbc.connection" level="OFF"/>
-    <logger name="jdbc.resultset" level="OFF"/>
-    <logger name="jdbc.resultsettable" level="OFF"/>
-    <logger name="jdbc.audit" level="OFF"/>
+    <logger name="jdbc.resultset" level="ERROR"/>
+    <logger name="jdbc.resultsettable" level="ERROE"/>
+    <logger name="jdbc.audit" level="ERROR"/>
     <logger name="jdbc.sqltiming" level="INFO"/>
-    <logger name="jdbc.sqlonly" level="OFF"/>
+    <logger name="jdbc.sqlonly" level="ERROR"/>
 
     <!--设置日志打印级别为INFO-->
     <root level="INFO">
-        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="STDOUT"/>
         <appender-ref ref="FILEINFO"/>
         <appender-ref ref="FILEWARN"/>
         <appender-ref ref="FILEERROR"/>

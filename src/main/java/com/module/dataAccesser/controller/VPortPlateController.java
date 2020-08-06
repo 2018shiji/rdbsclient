@@ -1,4 +1,4 @@
-package com.module.dataAccesser;
+package com.module.dataAccesser.controller;
 
 import com.module.dataAccesser.pojo.VPortPlate;
 import com.module.dataAccesser.postgreSQL.plate.VPortPlateService;
