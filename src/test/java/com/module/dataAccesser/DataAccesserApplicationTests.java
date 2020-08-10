@@ -1,7 +1,6 @@
 package com.module.dataAccesser;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
@@ -9,6 +8,7 @@ class DataAccesserApplicationTests {
 
     RestClientUtil util = new RestClientUtil();
     PlateRestClientUtil plateUtil = new PlateRestClientUtil();
+    DockRestClientUtil dockUtil = new DockRestClientUtil();
 
     @Test
     void getArticleByIdDemo() {
@@ -21,9 +21,7 @@ class DataAccesserApplicationTests {
     }
 
     @Test
-    void updateArticleDemo(){
-        util.updateArticleDemo();
-    }
+    void updateArticleDemo(){ util.updateArticleDemo(); }
 
     @Test
     void deleteArticleDemo(){
@@ -37,7 +35,12 @@ class DataAccesserApplicationTests {
 
     @Test
     void getPlateById(){
-        plateUtil.getArticleByIdDemo();
+        plateUtil.getPlateByPlateId();
+    }
+
+    @Test
+    void getDockById(){
+        dockUtil.getDockByDockId();
     }
 
 }

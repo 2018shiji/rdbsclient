@@ -17,13 +17,12 @@ public class VPortPlatePhoto implements Serializable {
 
     @Id
     @Column(name="photo_id")
-    private long photoId;
+    private long photoId;//not null 图片唯一ID
     @Column(name="plate_id")
-    private long plateId;
+    private long plateId;//not null图片所属拖车ID
     @Column(name="photo_url")
-    private String photoUrl;
+    private String photoUrl;//图片url(http://ip:port/url)
     @Column(name="ctime")
-    private Timestamp ctime;
-
+    private Timestamp ctime;//创建时间
 
 }

@@ -15,17 +15,17 @@ public class VPortPlate implements Serializable {
 
     @Id
     @Column(name="plate_id")
-    private long plateId;
+    private long plateId;//not null 数据ID
     @Column(name="plate_no")
-    private String plateNo;
+    private String plateNo;//车号
     @Column(name="trvalcrane_id")
-    private long trvalcraneId;
+    private long trvalcraneId;//桥吊id
     @Column(name="lane_no")
-    private long lane_no;
+    private long lane_no;//车道号
     @Column(name="ctime")
-    private Timestamp ctime;
+    private Timestamp ctime;//创建时间
     @Column(name="mtime")
-    private Timestamp mtime;
+    private Timestamp mtime;//更新时间
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "plate_id")
