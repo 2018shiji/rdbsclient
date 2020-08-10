@@ -1,6 +1,6 @@
-package com.module.dataAccesser.postgreSQL.article;
+package com.module.dataaccesser.postgresql.article;
 
-import com.module.dataAccesser.pojo.Article;
+import com.module.dataaccesser.postgresql.pojo.Article;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.PagingAndSortingRepository;

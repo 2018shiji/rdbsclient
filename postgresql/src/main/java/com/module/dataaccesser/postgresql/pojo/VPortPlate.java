@@ -1,4 +1,4 @@
-package com.module.dataAccesser.pojo;
+package com.module.dataaccesser.postgresql.pojo;
 
 import lombok.Data;
 

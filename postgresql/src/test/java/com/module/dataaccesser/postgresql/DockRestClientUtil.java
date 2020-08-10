@@ -1,6 +1,6 @@
-package com.module.dataAccesser;
+package com.module.dataaccesser.postgresql;
 
-import com.module.dataAccesser.pojo.VPortDock;
+import com.module.dataaccesser.postgresql.pojo.VPortDock;
 import org.springframework.http.*;
 import org.springframework.web.client.RestTemplate;
 

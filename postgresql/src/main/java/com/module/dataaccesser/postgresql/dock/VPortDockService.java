@@ -1,6 +1,6 @@
-package com.module.dataAccesser.postgreSQL.dock;
+package com.module.dataaccesser.postgresql.dock;
 
-import com.module.dataAccesser.pojo.VPortDock;
+import com.module.dataaccesser.postgresql.pojo.VPortDock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,6 +1,6 @@
-package com.module.dataAccesser.postgreSQL.dock;
+package com.module.dataaccesser.postgresql.dock;
 
-import com.module.dataAccesser.pojo.VPortDock;
+import com.module.dataaccesser.postgresql.pojo.VPortDock;
 import org.springframework.data.repository.CrudRepository;
 
 public interface VPortDockRepository extends CrudRepository<VPortDock, Long> {

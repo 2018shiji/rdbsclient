@@ -1,10 +1,8 @@
-package com.module.dataAccesser.postgreSQL.plate;
+package com.module.dataaccesser.postgresql.plate;
 
-import com.module.dataAccesser.pojo.VPortPlate;
+import com.module.dataaccesser.postgresql.pojo.VPortPlate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
 
 @Service
 public class VPortPlateService {

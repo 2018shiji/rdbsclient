@@ -1,8 +1,7 @@
-package com.module.dataAccesser.postgreSQL.article;
+package com.module.dataaccesser.postgresql.article;
 
-import com.module.dataAccesser.pojo.Article;
+import com.module.dataaccesser.postgresql.pojo.Article;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 

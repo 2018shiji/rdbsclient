@@ -1,8 +1,7 @@
-package com.module.dataAccesser.controller;
+package com.module.dataaccesser.postgresql.controller;
 
-import com.module.dataAccesser.pojo.VPortDock;
-import com.module.dataAccesser.pojo.VPortPlate;
-import com.module.dataAccesser.postgreSQL.dock.VPortDockService;
+import com.module.dataaccesser.postgresql.pojo.VPortDock;
+import com.module.dataaccesser.postgresql.dock.VPortDockService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
