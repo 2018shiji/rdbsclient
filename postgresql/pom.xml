@@ -27,8 +27,15 @@
 
         <dependency>
             <groupId>com.module.dataAccesser</groupId>
-            <artifactId>data_accesser</artifactId>
+            <artifactId>core</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.2.14</version>
         </dependency>
 
         <dependency>
