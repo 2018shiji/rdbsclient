@@ -10,9 +10,9 @@
     </parent>
 
     <groupId>com.module.dataAccesser</groupId>
-    <artifactId>data_accesser</artifactId>
+    <artifactId>rdbsclient</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>data_accesser</name>
+    <name>rdbsclient</name>
     <description>data access module</description>
 
     <properties>
@@ -37,23 +37,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>jcl-over-slf4j</artifactId>
-        </dependency>
-
-        <!--监控sql日志-->
-        <dependency>
-            <groupId>org.bgee.log4jdbc-log4j2</groupId>
-            <artifactId>log4jdbc-log4j2-jdbc4.1</artifactId>
-            <version>1.16</version>
         </dependency>
 
         <dependency>

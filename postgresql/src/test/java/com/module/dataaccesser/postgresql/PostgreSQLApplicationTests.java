@@ -1,14 +1,15 @@
 package com.module.dataaccesser.postgresql;
 
+import com.module.dataaccesser.core.trace.MdcServletFilter;
+import com.module.dataaccesser.core.trace.MdcTraceIdInterceptor;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PostgresqlApplicationTests {
+class PostgreSQLApplicationTests {
 
     RestClientUtil util = new RestClientUtil();
-    PlateRestClientUtil plateUtil = new PlateRestClientUtil();
-    DockRestClientUtil dockUtil = new DockRestClientUtil();
 
     @Test
     void getArticleByIdDemo() {
@@ -34,14 +35,5 @@ class PostgresqlApplicationTests {
         util.getAllArticlesDemo();
     }
 
-    @Test
-    void getPlateById(){
-        plateUtil.getPlateByPlateId();
-    }
-
-    @Test
-    void getDockById(){
-        dockUtil.getDockByDockId();
-    }
 
 }

@@ -1,13 +1,13 @@
-package com.module.dataAccesser;
+package com.module.dataaccesser.postgresql;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DataAccesserApplication {
+public class PostgreSQLApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DataAccesserApplication.class, args);
+        SpringApplication.run(PostgreSQLApplication.class, args);
     }
 
 }
