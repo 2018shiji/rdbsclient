@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.Assert;
 
+
 public class KafkaLogAppender<E> extends AppenderBase<E> {
     //此处，logback.xml中的logger的name属性，输出到本地
     private static final Logger log = LoggerFactory.getLogger("local");
