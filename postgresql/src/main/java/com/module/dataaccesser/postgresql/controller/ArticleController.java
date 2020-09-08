@@ -2,6 +2,8 @@ package com.module.dataaccesser.postgresql.controller;
 
 import com.module.dataaccesser.postgresql.pojo.Article;
 import com.module.dataaccesser.postgresql.article.ArticleService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -17,10 +19,12 @@ import java.util.List;
 public class ArticleController {
     @Autowired
     private ArticleService articleService;
+    Logger logger = LoggerFactory.getLogger("kafka");
 
     @GetMapping("article/{id}")
     public ResponseEntity<Article> getArticleById(@PathVariable("id") Integer id) {
         Article article = articleService.getArticleById(id);
+        logger.info(article.toString());
         return new ResponseEntity<Article>(article, HttpStatus.OK);
     }
     @GetMapping("articles")
