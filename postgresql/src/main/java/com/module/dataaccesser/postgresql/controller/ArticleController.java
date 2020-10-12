@@ -19,7 +19,7 @@ import java.util.List;
 public class ArticleController {
     @Autowired
     private ArticleService articleService;
-    Logger logger = LoggerFactory.getLogger("kafka");
+    Logger logger = LoggerFactory.getLogger(ArticleController.class);
 
     @GetMapping("article/{id}")
     public ResponseEntity<Article> getArticleById(@PathVariable("id") Integer id) {

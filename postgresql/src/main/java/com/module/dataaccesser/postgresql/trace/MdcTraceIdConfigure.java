@@ -18,7 +18,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ConditionalOnProperty(name = "log.traceId.pointcutExpression")
 public class MdcTraceIdConfigure {
-    @Value("S{log.traceId.pointcutExpression}")
+    @Value("${log.traceId.pointcutExpression}")
     private String POINTCUT_EXPRESSION;
 
     @Bean("MdcTraceIdInterceptor")

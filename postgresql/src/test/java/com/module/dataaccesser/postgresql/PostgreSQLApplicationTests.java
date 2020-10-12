@@ -41,6 +41,7 @@ class PostgreSQLApplicationTests {
     void testKafkaLog(){
         logger.info("this is kafka String----------------------------------------------------------------------------");
         loggerTest.info("this is test String");
+        System.out.println("something happen, this is System.out.println()");
     }
 
 }

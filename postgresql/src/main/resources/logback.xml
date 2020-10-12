@@ -104,13 +104,18 @@
         <appender-ref ref="STDOUT" />
     </appender>
 
+    <!--设置为OFF,即屏蔽; 留下sqltiming作为INFO级别输出-->
+    <logger name="jdbc.connection" level="OFF"/>
+    <logger name="jdbc.resultset" level="OFF"/>
+    <logger name="jdbc.resultsettable" level="OFF"/>
+    <logger name="jdbc.audit" level="OFF"/>
+    <logger name="jdbc.sqltiming" level="INFO"/>
+    <logger name="jdbc.sqlonly" level="OFF"/>
+
     <!--设置日志打印级别为INFO-->
     <root level="INFO">
         <appender-ref ref="kafkaAppender" />
         <appender-ref ref="CONSOLE"/>
-<!--        <appender-ref ref="FILEINFO"/>-->
-<!--        <appender-ref ref="FILEWARN"/>-->
-<!--        <appender-ref ref="FILEERROR"/>-->
     </root>
 
 </configuration>
