@@ -14,6 +14,7 @@ import java.io.IOException;
 public class MdcServletFilter extends MDCInsertingServletFilter {
     private static final String HEADER_FOR_TRACE_ID = "X-TRACE-ID";
 
+
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         if (!(request instanceof HttpServletRequest))
