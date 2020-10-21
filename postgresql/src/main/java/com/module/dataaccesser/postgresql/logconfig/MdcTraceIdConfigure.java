@@ -1,4 +1,4 @@
-package com.module.dataaccesser.postgresql.trace;
+package com.module.dataaccesser.postgresql.logconfig;
 
 import com.module.dataaccesser.core.trace.MdcTraceIdInterceptor;
 import org.springframework.aop.Advisor;

@@ -1,7 +1,7 @@
-package com.module.dataaccesser.postgresql.controller;
+package com.module.dataaccesser.postgresql;
 
-import com.module.dataaccesser.postgresql.pojo.Article;
-import com.module.dataaccesser.postgresql.article.ArticleService;
+import com.module.dataaccesser.postgresql.entity.Article;
+import com.module.dataaccesser.postgresql.service.ArticleService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,10 +16,10 @@ import java.util.List;
 
 @Controller
 @RequestMapping("user")
-public class ArticleController {
+public class Navigator {
     @Autowired
     private ArticleService articleService;
-    Logger logger = LoggerFactory.getLogger(ArticleController.class);
+    Logger logger = LoggerFactory.getLogger(Navigator.class);
 
     @GetMapping("article/{id}")
     public ResponseEntity<Article> getArticleById(@PathVariable("id") Integer id) {
@@ -27,11 +27,14 @@ public class ArticleController {
         logger.info(article.toString());
         return new ResponseEntity<Article>(article, HttpStatus.OK);
     }
+
     @GetMapping("articles")
     public ResponseEntity<List<Article>> getAllArticles() {
         List<Article> list = articleService.getAllArticles();
+        logger.info(list.toString());
         return new ResponseEntity<List<Article>>(list, HttpStatus.OK);
     }
+
     @PostMapping("article")
     public ResponseEntity<Void> addArticle(@RequestBody Article article, UriComponentsBuilder builder) {
         boolean flag = articleService.addArticle(article);
@@ -42,11 +45,13 @@ public class ArticleController {
         headers.setLocation(builder.path("/article/{id}").buildAndExpand(article.getArticleId()).toUri());
         return new ResponseEntity<Void>(headers, HttpStatus.CREATED);
     }
+
     @PutMapping("article")
     public ResponseEntity<Article> updateArticle(@RequestBody Article article) {
         articleService.updateArticle(article);
         return new ResponseEntity<Article>(article, HttpStatus.OK);
     }
+
     @DeleteMapping("article/{id}")
     public ResponseEntity<Void> deleteArticle(@PathVariable("id") Integer id) {
         articleService.deleteArticle(id);

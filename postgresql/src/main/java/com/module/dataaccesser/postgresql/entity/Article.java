@@ -1,4 +1,4 @@
-package com.module.dataaccesser.postgresql.pojo;
+package com.module.dataaccesser.postgresql.entity;
 
 import lombok.Data;
 import lombok.ToString;

@@ -1,6 +1,8 @@
-package com.module.dataaccesser.postgresql.article;
+package com.module.dataaccesser.postgresql.service;
 
-import com.module.dataaccesser.postgresql.pojo.Article;
+import com.module.dataaccesser.postgresql.entity.Article;
+import com.module.dataaccesser.postgresql.repository.IArticleRepository;
+import com.module.dataaccesser.postgresql.repository.IPSArticleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

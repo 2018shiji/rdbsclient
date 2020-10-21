@@ -6,6 +6,9 @@ import org.slf4j.LoggerFactory;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * MDC: 提供了在线程上下文中放置信息的解决方案，并且子线程不会自动继承父线程的MDC
+ */
 public class MyThreadContext {
     private static final Logger log = LoggerFactory.getLogger(MyThreadContext.class);
 

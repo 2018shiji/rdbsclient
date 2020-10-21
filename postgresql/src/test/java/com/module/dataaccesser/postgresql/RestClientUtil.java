@@ -1,6 +1,6 @@
 package com.module.dataaccesser.postgresql;
 
-import com.module.dataaccesser.postgresql.pojo.Article;
+import com.module.dataaccesser.postgresql.entity.Article;
 import org.springframework.http.*;
 import org.springframework.web.client.RestTemplate;
 
@@ -18,6 +18,7 @@ public class RestClientUtil {
         System.out.println("Id:"+article.getArticleId()+", Title:"+article.getTitle()
                 +", Category:"+article.getCategory() + ", chapter:" + article.getChapter());
     }
+
     public void getAllArticlesDemo() {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
@@ -31,6 +32,7 @@ public class RestClientUtil {
                     +", Category: "+article.getCategory() + ", chapter: " + article.getChapter());
         }
     }
+
     public void addArticleDemo() {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
@@ -43,6 +45,7 @@ public class RestClientUtil {
         URI uri = restTemplate.postForLocation(url, requestEntity);
         System.out.println(uri.getPath());
     }
+
     public void updateArticleDemo() {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
@@ -55,6 +58,7 @@ public class RestClientUtil {
         HttpEntity<Article> requestEntity = new HttpEntity<Article>(objArticle, headers);
         restTemplate.put(url, requestEntity);
     }
+
     public void deleteArticleDemo() {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);

@@ -1,4 +1,4 @@
-package com.module.dataaccesser.postgresql.trace;
+package com.module.dataaccesser.postgresql.logconfig;
 
 import com.module.dataaccesser.core.trace.MdcServletFilter;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;

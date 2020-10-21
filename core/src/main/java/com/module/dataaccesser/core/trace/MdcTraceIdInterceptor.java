@@ -8,6 +8,8 @@ import org.slf4j.MDC;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 
+import java.util.Map;
+
 /**
  * logback全局日志交易id拦截器
  */
