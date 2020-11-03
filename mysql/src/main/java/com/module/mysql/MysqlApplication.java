@@ -16,4 +16,5 @@ public class MysqlApplication {
         SpringApplication.run(MysqlApplication.class, args);
     }
 
+
 }
