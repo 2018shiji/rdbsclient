@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="PostgreSQL - postgres@192.168.21.128" uuid="b64c0ffd-bdf8-446d-ba6f-04b0719ddcac">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <remarks>postgres in ubuntu</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://192.168.21.128:5432/postgres</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="postgres@HX_OCR" uuid="d6ad252d-4077-41b2-bc68-2c1417c0eb21">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://10.28.77.240:6432/port</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="mysql" uuid="ece3794f-5c79-4ed8-bf3e-ebf7558a7b23">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://192.168.21.128:3306</jdbc-url>
+    </data-source>
+  </component>
+</project>
