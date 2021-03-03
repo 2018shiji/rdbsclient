@@ -13,10 +13,10 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="core" target="1.8" />
-      <module name="mysql" target="1.8" />
-      <module name="postgresql" target="1.8" />
-      <module name="rdbsclient" target="1.8" />
+      <module name="core" target="11" />
+      <module name="mysql" target="11" />
+      <module name="postgresql" target="11" />
+      <module name="rdbsclient" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -24,7 +24,7 @@
       <module name="core" options="-parameters" />
       <module name="mysql" options="-parameters" />
       <module name="postgresql" options="-parameters" />
-      <module name="rdbsclient" options="-parameters" />
+      <module name="rdbsclient" options="" />
     </option>
   </component>
 </project>
